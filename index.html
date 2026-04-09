@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rohan Bhate's modern responsive portfolio website.">
+  <title>Rohan Bhate | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <div class="page-shell">
+    <header class="topbar glass">
+      <a class="brand" href="#home">RB</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__thumb"></span>
+        </span>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="hero__content glass reveal">
+          <p class="eyebrow">Personal Portfolio</p>
+          <h1>Rohan Bhate</h1>
+          <p class="hero__title">
+            <span id="typing-text"></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </p>
+          <div class="hero__meta">
+            <span>1st Year B.Tech CSE student</span>
+            <span>Building with curiosity, consistency, and code</span>
+          </div>
+          <p class="hero__intro">
+            I am a passionate tech learner exploring programming, problem solving, and practical software projects.
+            I enjoy turning ideas into clean digital experiences while steadily growing my skills in development tools,
+            coding fundamentals, and real-world project building.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" id="resume-download" href="#" download="Rohan-Bhate-Resume.txt">Download Resume</a>
+            <a class="button button--ghost" href="#contact">Let’s Connect</a>
+          </div>
+        </div>
+
+        <div class="hero__visual glass reveal">
+          <div class="profile-card">
+            <img
+              class="profile-image"
+              src="assets/rohan-profile.jpeg"
+              alt="Profile photo of Rohan Bhate"
+            >
+            <div class="profile-badge">Programmer • Learner • Builder</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid" id="about">
+        <div class="section-card glass reveal">
+          <p class="section-tag">About</p>
+          <h2>Learning fast. Building with intent.</h2>
+          <p>
+            As a first-year Computer Science student, I’m focused on building strong coding foundations while creating
+            projects that solve practical problems. I enjoy experimenting with logic, tools, and workflows that help me
+            grow into a confident software developer.
+          </p>
+        </div>
+        <div class="section-card glass reveal">
+          <p class="section-tag">Education</p>
+          <h2>B.Tech in Computer Science & Engineering</h2>
+          <p>
+            Currently in my 1st year, developing core knowledge in programming, computational thinking, and collaborative
+            development practices.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading reveal">
+          <p class="section-tag">Skills</p>
+          <h2>Growing technical confidence through consistent practice</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card glass reveal">
+            <div class="skill-card__top">
+              <h3>C</h3>
+              <span>30%</span>
+            </div>
+            <div class="progress-bar" data-progress="30">
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__top">
+              <h3>Python</h3>
+              <span>75%</span>
+            </div>
+            <div class="progress-bar" data-progress="75">
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__top">
+              <h3>Git / GitHub</h3>
+              <span>25%</span>
+            </div>
+            <div class="progress-bar" data-progress="25">
+              <span></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading reveal">
+          <p class="section-tag">Projects</p>
+          <h2>Work that reflects practical thinking</h2>
+        </div>
+        <article class="project-card glass reveal">
+          <div class="project-card__content">
+            <p class="project-card__label">Featured Project</p>
+            <h3>Campus Transportation Management System</h3>
+            <p>
+              A concept-driven project focused on improving how campus transportation can be organized, monitored,
+              and made more efficient. The idea centers on simplifying transport coordination, reducing confusion,
+              and improving the overall student commuting experience.
+            </p>
+            <div class="project-tags">
+              <span>System Design</span>
+              <span>Problem Solving</span>
+              <span>Student Utility</span>
+            </div>
+          </div>
+          <div class="project-glow" aria-hidden="true"></div>
+        </article>
+      </section>
+
+      <section class="section" id="certificates">
+        <div class="section-heading reveal">
+          <p class="section-tag">Certificates</p>
+          <h2>Milestones from my learning journey</h2>
+        </div>
+        <div class="certificate-grid">
+          <button class="certificate-card glass reveal" type="button" data-full="assets/certificate-chemistry.jpeg">
+            <img src="assets/certificate-chemistry.jpeg" alt="Revisiting chemistry course certificate preview">
+            <span>Revisiting Chemistry: Preparatory Course for ACE-AS1201</span>
+          </button>
+          <button class="certificate-card glass reveal" type="button" data-full="assets/certificate-matlab.jpeg">
+            <img src="assets/certificate-matlab.jpeg" alt="Introduction to Programming with MATLAB certificate preview">
+            <span>Introduction to Programming with MATLAB</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact-card glass reveal">
+          <div class="section-heading section-heading--left">
+            <p class="section-tag">Contact</p>
+            <h2>Let’s build something meaningful</h2>
+          </div>
+          <div class="contact-grid">
+            <a class="contact-item" href="mailto:rohanudaybhate@gmail.com">
+              <span>Email</span>
+              <strong>rohanudaybhate@gmail.com</strong>
+            </a>
+            <a class="contact-item" href="tel:7385564500">
+              <span>Phone</span>
+              <strong>7385564500</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="certificate-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__dialog glass" role="dialog" aria-modal="true" aria-label="Certificate preview">
+      <button class="modal__close" id="modal-close" type="button" aria-label="Close certificate preview">&times;</button>
+      <img id="modal-image" src="" alt="Expanded certificate preview">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
